@@ -22,6 +22,10 @@
   #include <shlobj.h>
 #endif
 
+#ifdef __APPLE__
+  #include <TargetConditionals.h>
+#endif
+
 namespace app {
 
 ResourceFinder::ResourceFinder(bool log)
@@ -97,7 +101,11 @@ void ResourceFinder::includeDataDir(const char* filename)
   includeUserDir(buf); // $HOME/Library/Application Support/Aseprite/data/filename
   includeBinDir(buf);  // $BINDIR/data/filename (outside the bundle)
 
+  #if TARGET_OS_IPHONE
+  sprintf(buf, "data/%s", filename);
+  #else
   sprintf(buf, "../Resources/data/%s", filename);
+  #endif
   includeBinDir(buf);  // $BINDIR/../Resources/data/filename (inside a bundle)
 
 #else
