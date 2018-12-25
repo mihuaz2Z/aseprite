@@ -44,7 +44,8 @@
 	url = https://github.com/aseprite/harfbuzz.git
 [submodule "third_party/libarchive"]
 	path = third_party/libarchive
-	url = https://github.com/aseprite/libarchive.git
+	url = https://github.com/turbolent/libarchive.git
+	branch = ios
 [submodule "third_party/json11"]
 	path = third_party/json11
 	url = https://github.com/aseprite/json11.git
