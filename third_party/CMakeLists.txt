@@ -111,6 +111,7 @@ set(ENABLE_LZMA OFF CACHE BOOL "Enable the use of the system LZMA library if fou
 set(ENABLE_CNG OFF CACHE BOOL "Enable the use of CNG(Crypto Next Generation)")
 set(ENABLE_BZip2 OFF CACHE BOOL "Enable the use of the system BZip2 library if found")
 set(ENABLE_LIBXML2 OFF CACHE BOOL "Enable the use of the system libxml2 library if found")
+set(ENABLE_OPENSSL OFF CACHE BOOL "Enable the user of the OpenSSL library if found")
 add_subdirectory(libarchive)
 target_include_directories(archive_static INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/libarchive/libarchive>)
