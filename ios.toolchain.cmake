@@ -318,8 +318,6 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET "" CACHE STRING
   "Must be empty for iOS builds." FORCE)
 # Set the architectures for which to build.
 set(CMAKE_OSX_ARCHITECTURES ${IOS_ARCH} CACHE STRING "Build architecture for iOS")
-# Change the type of target generated for try_compile() so it'll work when cross-compiling
-set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 # All iOS/Darwin specific settings - some may be redundant.
 set(CMAKE_SHARED_LIBRARY_PREFIX "lib")
 set(CMAKE_SHARED_LIBRARY_SUFFIX ".dylib")
